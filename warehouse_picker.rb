@@ -31,6 +31,8 @@ def bay_id_search
   input = input.split(", ")
 
   product_names = input.map { |s| @product_list[s] }
+  # This is where I am having issues. I can not work out how to tell this line to use the keys from the input, and return their values.
+  # The rest of the code can carry on just fine, but part of the exercise is to show that these keys return their value.
 
   puts input
 
