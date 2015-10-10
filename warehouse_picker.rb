@@ -35,8 +35,6 @@ def bay_id_search
 
   product_names = input.map { |s| product_list.key(s) }
 
-  puts input
-
   product_indexes = input.map { |s| @pl_key_index.index(s) }.sort
 
   distance = product_indexes.last - product_indexes.first
