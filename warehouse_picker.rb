@@ -38,6 +38,10 @@ def bay_id_search
 
   distance = product_indexes.last - product_indexes.first
 
+  product_names.each do |value|
+    puts "ID: #{input} , represents the product: #{value}"
+  end
+
   puts "The distance between the farthest apart bays is... #{distance}!"
 
 end
