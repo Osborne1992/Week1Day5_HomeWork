@@ -15,7 +15,7 @@ def product_search
 
   product_indexes = product_ids.map { |s| @pl_key_index.index(s) }.sort
 
-  product_order = product_indexes.sort.map { |s| @pl_key_index[s] }
+  product_order = product_indexes.map { |s| @pl_key_index[s] }
 
   distance = product_indexes.last - product_indexes.first
 
@@ -38,7 +38,7 @@ def bay_id_search
 
   product_indexes = input.map { |s| @pl_key_index.index(s) }.sort
 
-  product_order = product_indexes.sort.map { |s| @pl_key_index[s] }
+  product_order = product_indexes.map { |s| @pl_key_index[s] }
 
   distance = product_indexes.last - product_indexes.first
 
