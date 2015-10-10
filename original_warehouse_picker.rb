@@ -15,13 +15,15 @@ def product_search
 
   product_indexes = product_ids.map { |s| @pl_key_index.index(s) }.sort
 
+  product_order = product_indexes.sort.map { |s| @pl_key_index[s] }
+
   distance = product_indexes.last - product_indexes.first
 
   product_ids.each do |id|
     puts "Product: #{@product_list[id]}, has ID of #{id}"
   end
 
-  puts "The distance between the farthest apart bays is... #{distance}!"
+  puts "The distance between the farthest apart bays is... #{distance}! And you need to visit them in this order: #{product_order}"
 
 end
 # binding.pry
@@ -36,13 +38,15 @@ def bay_id_search
 
   product_indexes = input.map { |s| @pl_key_index.index(s) }.sort
 
+  product_order = product_indexes.sort.map { |s| @pl_key_index[s] }
+
   distance = product_indexes.last - product_indexes.first
 
   product_names.each do |id|
     puts "ID: #{@product_list.key(id)}, represents the product: #{id}"
   end
 
-  puts "The distance between the farthest apart bays is... #{distance}!"
+  puts "The distance between the farthest apart bays is... #{distance}! And you need to visit them in this order: #{product_order}"
 
 end
 
