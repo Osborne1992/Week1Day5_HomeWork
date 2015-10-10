@@ -41,6 +41,9 @@ def bay_id_search
   product_names.each do |value|
     puts "ID: #{input} , represents the product: #{value}"
   end
+  #I appear to have progressed my code to a point where I can display keys searched and values of them,
+  #but it is not quite right... It shows all the keys in an array despite previously being displayed
+  #individually due to the .split
 
   puts "The distance between the farthest apart bays is... #{distance}!"
 
