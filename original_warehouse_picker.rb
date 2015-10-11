@@ -5,8 +5,8 @@
 @pl_key_index = ["a10", "a9", "a8", "a7", "a6", "a5", "a4", "a3", "a2", "a1", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9", "b10"]
 
 def product_search 
-
   puts "Please enter the Product names you wish to search for, seperated by commas!"
+
   input = gets.chomp.downcase
 
   input = input.split(", ")
@@ -24,12 +24,11 @@ def product_search
   end
 
   puts "The distance between the farthest apart bays is... #{distance}! And you need to visit them in this order: #{product_order}"
-
 end
-# binding.pry
-def bay_id_search
 
+def bay_id_search
   puts "Please enter the Bay IDs you wish to search for, seperated by commas!"
+
   input = gets.chomp.downcase
 
   input = input.split(", ")
@@ -47,7 +46,6 @@ def bay_id_search
   end
 
   puts "The distance between the farthest apart bays is... #{distance}! And you need to visit them in this order: #{product_order}"
-
 end
 
 puts `clear`

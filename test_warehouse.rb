@@ -11,20 +11,12 @@ end
 puts `clear`
 puts "Warehouse Picker Application"
 puts "Enter the Product names OR Bay IDs you wish to search for, seperated by a comma."
+
 search = gets.chomp.downcase
 
 search = search.split(", ")
 
 if
-  product_ids = search.map { |s| product_list.key(s) }
-    product_indexes = product_ids.map { |s| pl_key_index.index(s) }.sort
-      @product_order = product_indexes.map { |s| pl_key_index[s] }
-        @distance = product_indexes.last - product_indexes.first
-          product_ids.each do |id|
-            puts "Product: #{product_list[id]}, has ID of #{id}"
-          end
-          puts final_statement
-  else
   product_names = search.map { |s| product_list["#{s}"] }
     product_indexes = search.map { |s| pl_key_index.index(s) }.sort
       @product_order = product_indexes.map { |s| pl_key_index[s] }
@@ -32,5 +24,15 @@ if
           product_names.each do |id|
             puts "ID: #{product_list.key(id)}, represents the product: #{id}"
           end
+          puts final_statement
+  else
+  product_ids = search.map { |s| product_list.key(s) }
+    product_indexes = product_ids.map { |s| pl_key_index.index(s) }.sort
+      @product_order = product_indexes.map { |s| pl_key_index[s] }
+        @distance = product_indexes.last - product_indexes.first
+          product_ids.each do |id|
+            puts "Product: #{product_list[id]}, has the ID: #{id}"
+          end
+
           puts final_statement
 end
