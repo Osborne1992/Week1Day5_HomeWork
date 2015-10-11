@@ -11,7 +11,6 @@ end
 puts `clear`
 puts "Warehouse Picker Application"
 puts "Enter the Product names OR Bay IDs you wish to search for, seperated by a comma."
-
 search = gets.chomp.downcase
 
 search = search.split(", ")
@@ -33,6 +32,5 @@ if
           product_ids.each do |id|
             puts "Product: #{product_list[id]}, has the ID: #{id}"
           end
-
           puts final_statement
 end
