@@ -58,4 +58,7 @@ search = gets.chomp.downcase
 case search
 when "product" then product_search
 when "bay id" then bay_id_search
+when "bay" then bay_id_search
+when "id" then bay_id_search
+else 
 end
