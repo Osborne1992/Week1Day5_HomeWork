@@ -1,5 +1,7 @@
 #require 'pry-byebug'
 
+#Third attempt at exercise, 1 hash, no search definitions, with "invalud input" message
+
 product_list = { "a1" => "needle", "a2" => "stop sign", "a3" => "blouse", "a4" => "hanger", "a5" => "rubber duck", "a6" => "shovel", "a7" => "bookmark", "a8" => "model car", "a9" => "glow stick", "a10" => "rubber band", "b1" => "tire swing", "b2" => "sharpie", "b3" => "picture frame", "b4" => "photo album", "b5" => "nail filer", "b6" => "tooth paste", "b7" => "bath fizzers", "b8" => "tissue box", "b9" => "deodorant", "b10" => "cookie jar", "c1" => "rusty nail", "c2" => "drill press", "c3" => "chalk", "c4" => "word search", "c5" => "thermometer", "c6" => "face wash", "c7" => "paint brush", "c8" => "candy wrapper", "c9" => "shoe lace", "c10" => "leg warmers" }
 
 pl_key_index = ["a10", "a9", "a8", "a7", "a6", "a5", "a4", "a3", "a2", "a1", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9", "b10"]

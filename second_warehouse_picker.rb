@@ -1,5 +1,7 @@
 #require 'pry-byebug'
 
+#Second attempt at exercise, 2 hashes, 1 in each search definition (the second has keys and values switched)
+
 @pl_key_index = ["a10", "a9", "a8", "a7", "a6", "a5", "a4", "a3", "a2", "a1", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "b1", "b2", "b3", "b4", "b5", "b6", "b7", "b8", "b9", "b10"]
 
 def product_search
