@@ -15,7 +15,7 @@ search = gets.chomp.downcase
 
 search = search.split(", ")
 
-if
+if pl_key_index.include?(search.first) then
   product_names = search.map { |s| product_list["#{s}"] }
     product_indexes = search.map { |s| pl_key_index.index(s) }.sort
       @product_order = product_indexes.map { |s| pl_key_index[s] }
@@ -24,7 +24,8 @@ if
             puts "ID: #{product_list.key(id)}, represents the product: #{id}"
           end
           puts final_statement
-  else
+
+  elsif product_list.has_value?(search.first) then
   product_ids = search.map { |s| product_list.key(s) }
     product_indexes = product_ids.map { |s| pl_key_index.index(s) }.sort
       @product_order = product_indexes.map { |s| pl_key_index[s] }
@@ -33,4 +34,6 @@ if
             puts "Product: #{product_list[id]}, has the ID: #{id}"
           end
           puts final_statement
+  else
+    puts "Sorry, your input is invalid."
 end
